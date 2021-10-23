@@ -1,0 +1,26 @@
+{
+  "name": "veldoffice-downloads",
+  "version": "1.0.0",
+  "description": "My first Cavalion with Veldoffice",
+  "main": "index.js",
+  "dependencies": {
+    "cavalion-js": "^1.0.64-a",
+    "jquery": "^3.6.0",
+    "requirejs": "^2.3.6",
+    "veldoffice-js": "^1.0.49"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/relluf/Veldoffice-downloads.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/relluf/Veldoffice-downloads/issues"
+  },
+  "homepage": "https://github.com/relluf/Veldoffice-downloads#readme"
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, viewport-fit=cover">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta name="format-detection" content="telephone=no">
+		<title>Veldoffice-downloads</title>
+		<style type="text/css" media="screen">
+		* { margin: 0; padding: 0; box-sizing: border-box;}
+		
+		body, html {
+			background-color: #D8DBE2;
+			font-family: Verdana, sans-serif;
+			font-size: 11pt;
+			text-align: center;
+			height:100%;
+		}
+		body.logo { 
+			padding-top: 50px;
+			background-image: url(https://veldapps.com/v7/va/menu/more/icon.png);
+			background-repeat: no-repeat;
+			background-position-x: center;
+			background-position-y: 25%; 
+		}
+		div.bg { 
+			position: absolute; 
+			left:0; top:-250px; 
+			z-index: 1; 
+			opacity: 0.05; 
+			pointer-events:none;
+			text-align:center; 
+			width: 50%; 
+		}
+		.with-shadow { box-shadow:rgba(0, 0, 0, 0.4) 0px 3px 14px 0px; }
+		.transparent { background-color:transparent; }
+		.glassy { padding: 4px; background-color: rgba(155, 155, 155, 0.35); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+		.loading { background: rgba(155, 155, 155, 0.35) url(/shared/vcl/images/loading.gif) 50% 50% no-repeat; }
+		.rounded { border-radius: 13px; }
+		.animate-width { transition: width 350ms ease-in; }
+		
+		.panel { margin-left: auto; margin-right:auto; width: 300px; padding: 32px; text-align: center;}
+		.label { width: 200px; display: inline-block; }
+		.hidden { display: none; }
+	
+		input { max-width: 350px; font-size: 14pt; padding: 8px; border-radius: 10px; margin: 8px; text-align: center; width: 90%; }
+		button { font-family: Lucida Grande, Arial, sans-serif; font-size: 9pt; padding: 8px 16px; border-radius: 13px; }
+		img {}
+		
+		</style>
+		<script src="node_modules/requirejs/require.js" data-main="index.js"></script>
+	</head>
+	<body class="logo">
+		<div class="panel glassy with-shadow rounded loading">
+			<form class="login hidden">
+				<center><b>Aanmelden bij Veldoffice</b></center>
+				<br>
+				<div>
+					<input type="email" name="username" placeholder="gebruikersnaam">
+				</div>
+				<div>
+					<input type="password" name="password" placeholder="wachtwoord">
+				</div>
+				<br>
+				<button type="submit">Ga</button>
+			</form>
+			<div class="download hidden">
+				<center><b><span id="user">Aangemeld</span></b></center><br>
+				<a id="download" href="#"><button>Download</button></a>
+				<button id="exit1">Afmelden</button>
+			</div>
+			<div class="invalid hidden">
+				<center><b><span id="user">Aangemeld</span></b></center><br>
+				<div>Ongeldige download. Neem contact op met Veldapps.</div>
+				<button id="exit2">Afmelden</button>
+			</div>
+		</div>
+	</body>
+</html>
